@@ -18,11 +18,11 @@ namespace Tasdk.Models
         public override double DrivePath { get  ; set  ; }
 
 
-        public override void ShowInfo()
-        {
-            Console.WriteLine($"DoorCount:{DoorCount},VinCode:{VinCode},WheelThickness:{WheelThickness}" +
-                $",HorsePower:{HorsePower},CurrentOil:{CurrentOil},FuelType:{FuelType},Transmission Auto:{TransmissionKind}" +
-                $",DriveTime:{DriveTime},DrivePath:{DrivePath},Avarange Speed:{AvarangeSpeed()}");
-        }
+        //public override void ShowInfo()
+        //{
+        //    Console.WriteLine($"DoorCount:{DoorCount},VinCode:{VinCode},WheelThickness:{WheelThickness}" +
+        //        $",HorsePower:{HorsePower},CurrentOil:{CurrentOil},FuelType:{FuelType},Transmission Auto:{TransmissionKind}" +
+        //        $",DriveTime:{DriveTime},DrivePath:{DrivePath},Avarange Speed:{AvarangeSpeed()}");
+        //}
     }
 }

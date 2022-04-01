@@ -27,7 +27,7 @@ namespace Task.Models
             get { return _point; }
             set
             {
-                if (value < 100 && value > 0)
+                if (value <= 100 && value >= 0)
                     _point = value;
                 else throw new Exception("Invalid Point values");
             }
@@ -42,7 +42,7 @@ namespace Task.Models
         }
         public string StudentInfo()
         {
-            return ($"Id:{Id}\nFullName:{FullName}\nPoint:{Point}");
+            return ($"-----------------------\nId:{Id}\nFullName:{FullName}\nPoint:{Point}");
         }
         public override string ToString()
         {

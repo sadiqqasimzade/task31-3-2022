@@ -32,16 +32,12 @@ namespace Task.Models
                 else throw new Exception("Invalid Password Format");
             }
         }
-
-        private User()
-        {
-            Id = _id;
-            _id++;
-        }
-        public User(string email, string password) : this()
+        public User(string email, string password) 
         {
             Email = email;
             Password = password;
+            Id = _id;
+            _id++;
         }
         public User(string fullname, string email, string password) : this(email, password)
         {
@@ -69,7 +65,7 @@ namespace Task.Models
 
         public void ShowInfo()
         {
-            Console.WriteLine($"Id:{Id}\nFullName:{FullName}\nEmail:{Email}");
+            Console.WriteLine($"-----------------------\nId:{Id}\nFullName:{FullName}\nEmail:{Email}");
         }
     }
 }

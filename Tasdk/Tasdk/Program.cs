@@ -11,14 +11,13 @@ namespace Tasdk
             Plane plane = new Plane();
             Bicycle bicycle = new Bicycle();
 
-            car.CurrentOil = 5;
-            car.DoorCount = 4;
-            car.DrivePath = 10;
-            car.DriveTime = 5;
-            car.FuelType = "disel";
-            car.HorsePower = 1000;
-            car.TankSize = 599;
-            car.ShowInfo(); 
+           
+
+            car.ShowInfo();
+            Console.WriteLine("----------");
+            plane.ShowInfo();
+            Console.WriteLine("----------");
+            bicycle.ShowInfo();
 
         }
     }

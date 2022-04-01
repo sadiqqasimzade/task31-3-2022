@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
+using Task.Custom_Exceptions;
 namespace Task.Models
 {
     class Group
@@ -23,7 +23,7 @@ namespace Task.Models
             get { return _studentLimit; }
             set
             {
-                if (value >= 5 || value <= 18)
+                if (value >= 5 && value <= 18)
                     _studentLimit = value;
                 else throw new Exception("Limit cant be less than 5 and more than 18");
             }
@@ -37,7 +37,7 @@ namespace Task.Models
         }
         public bool CheckGroupNo(string groupNo)
         {
-            if (!String.IsNullOrEmpty(groupNo) && !String.IsNullOrWhiteSpace(groupNo) || groupNo.Length == 5)
+            if (!String.IsNullOrEmpty(groupNo) && !String.IsNullOrWhiteSpace(groupNo) && groupNo.Length == 5)
             {
                 int upperCounter = 0;
                 int digitCounter = 0;
@@ -62,16 +62,17 @@ namespace Task.Models
                 Array.Resize(ref students, students.Length + 1);
                 students[students.Length - 1] = student;
             }
-            else throw new Exception("No space avairable");
+            else throw new NoSpaceAvailable("No space avairable");
         }
         public Student GetStudent(int? id)
         {
-            if (id != null)
+            if (id !=null)
             {
                 foreach (var student in students)
                 {
                     if (student.Id == id) return student;
                 }
+                throw new Exception("Not Found");
             }
 
             throw new Exception("Cant be null");

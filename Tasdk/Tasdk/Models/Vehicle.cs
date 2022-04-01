@@ -22,7 +22,8 @@ namespace Tasdk.Models
             }
         }
 
-        public abstract void ShowInfo();
+        
+        
        
     }
 }

@@ -13,9 +13,9 @@ namespace Tasdk.Models
 
       
 
-        public override void ShowInfo()
-        {
-            Console.WriteLine($"PedalKind:{PedalKind},Wheel:{WheelThickness},DriveTime:{DriveTime},DrivePath:{DrivePath},Avarange Speed:{AvarangeSpeed()}");
-        }
+        //public override void ShowInfo()
+        //{
+        //    Console.WriteLine($"PedalKind:{PedalKind},Wheel:{WheelThickness},DriveTime:{DriveTime},DrivePath:{DrivePath},Avarange Speed:{AvarangeSpeed()}");
+        //}
     }
 }
