@@ -9,9 +9,7 @@ namespace Tasdk.Models
         public static void ShowInfo(this Object obj)
         {
             foreach (var prop in obj.GetType().GetProperties())
-            {
                 Console.WriteLine(prop.Name + ":" + prop.GetValue(obj));
-            }
         }
     }
 }

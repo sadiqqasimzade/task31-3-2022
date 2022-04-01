@@ -14,15 +14,9 @@ namespace Tasdk.Models
         public double CurrentOil { get  ; set  ; }
         public string FuelType { get  ; set  ; }
         public string TransmissionKind { get  ; set  ; }
-        public override double DriveTime { get  ; set  ; }
-        public override double DrivePath { get  ; set  ; }
 
 
-        //public override void ShowInfo()
-        //{
-        //    Console.WriteLine($"DoorCount:{DoorCount},VinCode:{VinCode},WheelThickness:{WheelThickness}" +
-        //        $",HorsePower:{HorsePower},CurrentOil:{CurrentOil},FuelType:{FuelType},Transmission Auto:{TransmissionKind}" +
-        //        $",DriveTime:{DriveTime},DrivePath:{DrivePath},Avarange Speed:{AvarangeSpeed()}");
-        //}
+
+        
     }
 }

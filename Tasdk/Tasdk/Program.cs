@@ -18,7 +18,8 @@ namespace Tasdk
             plane.ShowInfo();
             Console.WriteLine("----------");
             bicycle.ShowInfo();
-
+            
+            
         }
     }
 }

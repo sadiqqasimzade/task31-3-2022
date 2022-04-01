@@ -1,13 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
+using Tasdk.Exceptions;
 namespace Tasdk.Models
 {
     abstract class Vehicle
     {
-        public abstract double DriveTime { get; set; }
-        public abstract double DrivePath { get; set; }
+        double _drivePath;
+        double _driveTime;
+        public double DriveTime
+        {
+            get { return _driveTime; }
+            set
+            {
+                if(value >= 0)
+                    _driveTime = value;
+                else throw new NegativeException("Cant be Negative");
+            }
+        }
+        public double DrivePath
+        {
+            get { return _drivePath; }
+            set
+            {
+                if (value >= 0)
+                    _drivePath = value;
+                else throw new NegativeException("Cant be Negative");
+            }
+        }
 
         public double AvarangeSpeed()
         {
@@ -22,8 +42,15 @@ namespace Tasdk.Models
             }
         }
 
-        
-        
-       
+        static void NegativeCheck(ref ValueTuple value)
+        {
+
+        }
+        static void ZeroOrNegativeCheck()
+        {
+
+        }
+
+
     }
 }

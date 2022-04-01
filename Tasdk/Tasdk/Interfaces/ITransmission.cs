@@ -6,6 +6,6 @@ namespace Tasdk.Models
 {
     interface ITransmission
     {
-        public string TransmissionKind { get; set; } // auto true false
+        public string TransmissionKind { get; set; } 
     }
 }
